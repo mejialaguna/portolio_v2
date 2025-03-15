@@ -28,7 +28,7 @@ const projects = [
   {
     name: 'Portfolio',
     description:
-      'A small version of tweeter were you can leave your thoughts and let others leave their comments about you thought. You able to create, update or delete your messages. ',
+      'Welcome to my portfolio! I’m a Frontend Developer with a strong focus on building scalable, high-performance web applications. With expertise in React, TypeScript, JavaScript, SCSS, and modern UI/UX principles, I create seamless, interactive user experiences.',
     stack: [
       'HTML',
       'JavaScript',
@@ -45,15 +45,15 @@ const projects = [
       'Zod',
     ],
     DeploymentSite: 'Deployment site: Heroku',
-    sourceCode: 'hhttps://github.com/mejialaguna/portolio_v2',
-    livePreview: 'https://portolio-v2-5gvjeoler-jlmls-projects.vercel.app/',
+    sourceCode: 'https://github.com/mejialaguna/portolio_v2',
+    livePreview: 'https://jlml-portolio.vercel.app/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742056944/portfolio/r2twx2dzd67hcqauxfke.jpg',
   },
   {
     name: 'Lil-Tweet',
     description:
-      'A small version of tweeter were you can leave your thoughts and let others leave their comments about you thought. You able to create, update or delete your messages. ',
+      'A small version of Twitter were you can leave your thoughts and let others leave their comments about you thought. You able to create, update or delete your messages. ',
     stack: [
       'HTML',
       'JavaScript',

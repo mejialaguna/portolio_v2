@@ -1,17 +1,60 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
-import React from 'react';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
+import React, { useCallback } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from "@/components/ui/card";
+import { sendEmail } from "@/lib/resend";
+import { contactFormSchema, type TContactForm } from "@/lib/validations";
+
+import ContactFormBtn from "./contactMeFormButton";
 
 interface ContactMeProps {
   social: string;
 }
 
 export const ContactMe = ({ social }: ContactMeProps) => {
+  const {
+    register,
+    trigger,
+    getValues,
+    formState: { errors },
+  } = useForm<TContactForm>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const handleAction = useCallback(async () => {
+    try {
+      const result = await trigger();
+      if (!result) return;
+
+      const contactInfo = getValues();
+
+      const { data } = await sendEmail(contactInfo);
+      const isError = data?.error?.message;
+
+      // Optionally, you can show a success message here
+      const toastMessage = isError
+        ? "Failed to send email!"
+        : "Email sent successfully!";
+
+      toast(toastMessage);
+    } catch (error) {
+      toast(`Failed to send email:, ${error}`);
+      // Optionally, set an error state to show a message in the UI
+    }
+  }, [getValues, trigger]);
+
   return (
     <section className="bg-muted/30 py-24 justify-items-center" id="contactMe">
       <div className="container">
@@ -36,7 +79,7 @@ export const ContactMe = ({ social }: ContactMeProps) => {
           >
             <Card>
               <CardContent className="pt-6">
-                <form className="grid gap-4">
+                <form action={handleAction} className="grid gap-4">
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="grid gap-2">
                       <label htmlFor="name" className="text-sm font-medium">
@@ -50,7 +93,13 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                           focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                           disabled:opacity-50"
                         placeholder="Your name"
+                        {...register("name")}
                       />
+                      {errors.name && (
+                        <p className="text-red-500 text-xs">
+                          {errors.name.message}
+                        </p>
+                      )}
                     </div>
                     <div className="grid gap-2">
                       <label htmlFor="email" className="text-sm font-medium">
@@ -65,7 +114,13 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                           focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                           disabled:opacity-50"
                         placeholder="Your email"
+                        {...register("email")}
                       />
+                      {errors.email && (
+                        <p className="text-red-500 text-xs">
+                          {errors.email.message}
+                        </p>
+                      )}
                     </div>
                   </div>
                   <div className="grid gap-2">
@@ -80,7 +135,13 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                         focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                         disabled:opacity-50"
                       placeholder="Subject"
+                      {...register("subject")}
                     />
+                    {errors.subject && (
+                      <p className="text-red-500 text-xs">
+                        {errors.subject.message}
+                      </p>
+                    )}
                   </div>
                   <div className="grid gap-2">
                     <label htmlFor="message" className="text-sm font-medium">
@@ -93,11 +154,15 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                         focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
                         disabled:cursor-not-allowed disabled:opacity-50"
                       placeholder="Your message"
+                      {...register("message")}
                     />
+                    {errors.message && (
+                      <p className="text-red-500 text-xs">
+                        {errors.message.message}
+                      </p>
+                    )}
                   </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
-                  </Button>
+                  <ContactFormBtn />
                 </form>
               </CardContent>
             </Card>

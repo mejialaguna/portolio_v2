@@ -52,7 +52,7 @@ export const HeroSection = ({ name, role, social }: HeroSectionProps) => {
         </div>
       </motion.div>
       <motion.div
-        className="absolute [bottom:350px] flex flex-col items-center gap-2"
+        className="absolute bottom-72 flex flex-col items-center gap-2"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 3 }}

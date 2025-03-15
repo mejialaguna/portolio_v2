@@ -26,6 +26,31 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
+    name: 'Portfolio',
+    description:
+      'A small version of tweeter were you can leave your thoughts and let others leave their comments about you thought. You able to create, update or delete your messages. ',
+    stack: [
+      'HTML',
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'React-dom',
+      'Next.js',
+      'Framer Motion',
+      'Tailwind',
+      'Shadcn',
+      'Zod',
+      'React-hook-form',
+      'Resend',
+      'Zod',
+    ],
+    DeploymentSite: 'Deployment site: Heroku',
+    sourceCode: 'hhttps://github.com/mejialaguna/portolio_v2',
+    livePreview: 'https://portolio-v2-5gvjeoler-jlmls-projects.vercel.app/',
+    image:
+      'https://res.cloudinary.com/jlml/image/upload/v1742056944/portfolio/r2twx2dzd67hcqauxfke.jpg',
+  },
+  {
     name: 'Lil-Tweet',
     description:
       'A small version of tweeter were you can leave your thoughts and let others leave their comments about you thought. You able to create, update or delete your messages. ',
@@ -52,7 +77,8 @@ const projects = [
     DeploymentSite: 'Deployment site: Heroku',
     sourceCode: 'https://github.com/mejialaguna/lil-tweet.git',
     livePreview: 'https://lil-tweet-bbc0fbc55ca8.herokuapp.com/',
-    image: 'https://res.cloudinary.com/jlml/image/upload/v1742020005/portfolio/fq8qokgjn6lzabmrojof.jpg'
+    image:
+      'https://res.cloudinary.com/jlml/image/upload/v1742020005/portfolio/fq8qokgjn6lzabmrojof.jpg',
   },
   {
     name: 'Journey Diary',
@@ -74,7 +100,8 @@ const projects = [
     DeploymentSite: 'Deployment site: Vercel',
     sourceCode: 'https://github.com/mejialaguna/Journal_Diary',
     livePreview: 'https://journal-diary-nine.vercel.app/',
-    image: 'https://res.cloudinary.com/jlml/image/upload/v1742019896/portfolio/vw3o5oe7ubftmb9lesgc.jpg'
+    image:
+      'https://res.cloudinary.com/jlml/image/upload/v1742019896/portfolio/vw3o5oe7ubftmb9lesgc.jpg',
   },
   {
     name: 'Calendar Agenda',
@@ -106,7 +133,8 @@ const projects = [
     DeploymentSite: 'Deployment site: Heroku',
     sourceCode: 'https://github.com/mejialaguna/calendar-frontEnd-2023',
     livePreview: 'https://jlml-calendar-app-4b5bf1054f30.herokuapp.com/',
-    image: 'https://res.cloudinary.com/jlml/image/upload/v1742019833/portfolio/czdf2g2gg9amwziq8f8w.jpg'
+    image:
+      'https://res.cloudinary.com/jlml/image/upload/v1742019833/portfolio/czdf2g2gg9amwziq8f8w.jpg',
   },
   {
     name: 'Geolocation - Application',
@@ -130,30 +158,31 @@ const projects = [
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742019697/portfolio/lph7l2etgvxdfiybqban.jpg',
   },
-  {
-    name: 'Netflix Style - YouTube',
-    description:
-      'Streaming service that allows our members to watch TV shows and movies on an internet-connected device. Restricted version for under age kids, appropriate context, easy to use and password-Less entry',
-    stack: [
-      'Html',
-      'CSS',
-      'Material-Mui',
-      'JavaScript',
-      'React-Js',
-      'Next-Js',
-      'Jwt',
-      'magic-sdk/admin',
-      'framer-motion',
-      'YouTube-api',
-      'hasura',
-      'graphQl',
-      'vercel',
-    ],
-    DeploymentSite: 'Deployment site: Vercel',
-    sourceCode: 'https://github.com/mejialaguna/nell-pipi',
-    livePreview: 'https://nell-pipi.vercel.app/',
-    image: 'https://res.cloudinary.com/jlml/image/upload/v1742020094/portfolio/tfv2iuhwt7vbvdbpcj99.jpg'
-  },
+  // {
+  //   name: 'Netflix Style - YouTube',
+  //   description:
+  //     'Streaming service that allows our members to watch TV shows and movies on an internet-connected device. Restricted version for under age kids, appropriate context, easy to use and password-Less entry',
+  //   stack: [
+  //     'Html',
+  //     'CSS',
+  //     'Material-Mui',
+  //     'JavaScript',
+  //     'React-Js',
+  //     'Next-Js',
+  //     'Jwt',
+  //     'magic-sdk/admin',
+  //     'framer-motion',
+  //     'YouTube-api',
+  //     'hasura',
+  //     'graphQl',
+  //     'vercel',
+  //   ],
+  //   DeploymentSite: 'Deployment site: Vercel',
+  //   sourceCode: 'https://github.com/mejialaguna/nell-pipi',
+  //   livePreview: 'https://nell-pipi.vercel.app/',
+  //   image:
+  //     'https://res.cloudinary.com/jlml/image/upload/v1742020094/portfolio/tfv2iuhwt7vbvdbpcj99.jpg',
+  // },
   {
     name: 'Shop with Me',
     description:

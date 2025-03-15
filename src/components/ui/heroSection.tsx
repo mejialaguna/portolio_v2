@@ -5,8 +5,6 @@ import { ArrowDown, Mail, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-import { Button } from "./button";
-
 interface HeroSectionProps {
   name: string;
   role: string;
@@ -36,15 +34,18 @@ export const HeroSection = ({ name, role, social }: HeroSectionProps) => {
           technologies
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button size="lg" className="gap-2 cursor-pointer">
+          <Link
+            href="#contactMe"
+            className="flex gap-2 bg-black px-3 rounded-md cursor-pointer items-center text-white"
+          >
             <Mail className="h-4 w-4" />
             Contact Me
-          </Button>
+          </Link>
           <Link
             href={social}
             target="_blank"
             rel="noopener noreferrer"
-            className="gap-2 cursor-pointer bg-black px-4 content-center rounded-md"
+            className="gap-2 cursor-pointer bg-black p-3 content-center rounded-md"
           >
             <Linkedin className="h-4 w-4 text-white" />
           </Link>

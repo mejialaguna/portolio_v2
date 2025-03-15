@@ -49,6 +49,7 @@ const projects = [
     livePreview: 'https://jlml-portolio.vercel.app/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742056944/portfolio/r2twx2dzd67hcqauxfke.jpg',
+    shouldShow: true,
   },
   {
     name: 'Lil-Tweet',
@@ -79,6 +80,7 @@ const projects = [
     livePreview: 'https://lil-tweet-bbc0fbc55ca8.herokuapp.com/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742020005/portfolio/fq8qokgjn6lzabmrojof.jpg',
+    shouldShow: true,
   },
   {
     name: 'Journey Diary',
@@ -102,6 +104,7 @@ const projects = [
     livePreview: 'https://journal-diary-nine.vercel.app/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742019896/portfolio/vw3o5oe7ubftmb9lesgc.jpg',
+    shouldShow: true,
   },
   {
     name: 'Calendar Agenda',
@@ -135,6 +138,7 @@ const projects = [
     livePreview: 'https://jlml-calendar-app-4b5bf1054f30.herokuapp.com/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742019833/portfolio/czdf2g2gg9amwziq8f8w.jpg',
+    shouldShow: false,
   },
   {
     name: 'Geolocation - Application',
@@ -157,6 +161,7 @@ const projects = [
     livePreview: 'https://geolocation-app-psi.vercel.app/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/v1742019697/portfolio/lph7l2etgvxdfiybqban.jpg',
+    shouldShow: false,
   },
   // {
   //   name: 'Netflix Style - YouTube',
@@ -210,6 +215,7 @@ const projects = [
     livePreview: 'https://shop-with-me-self.vercel.app/',
     image:
       'https://res.cloudinary.com/jlml/image/upload/t_Rounded 4:3/v1742019038/portfolio/dwdz74s2geye8ev6xn2d.png',
+    shouldShow: true,
   },
 ];
 

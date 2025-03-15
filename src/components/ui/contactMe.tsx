@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
-import React, { useCallback } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
+import React, { useCallback } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 
-import { Card, CardContent } from "@/components/ui/card";
-import { sendEmail } from "@/lib/resend";
-import { contactFormSchema, type TContactForm } from "@/lib/validations";
+import { Card, CardContent } from '@/components/ui/card';
+import { sendEmail } from '@/lib/resend';
+import { contactFormSchema, type TContactForm } from '@/lib/validations';
 
-import ContactFormBtn from "./contactMeFormButton";
+import ContactFormBtn from './contactMeFormButton';
 
 interface ContactMeProps {
   social: string;
@@ -26,10 +26,10 @@ export const ContactMe = ({ social }: ContactMeProps) => {
   } = useForm<TContactForm>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
     },
   });
 
@@ -45,8 +45,8 @@ export const ContactMe = ({ social }: ContactMeProps) => {
 
       // Optionally, you can show a success message here
       const toastMessage = isError
-        ? "Failed to send email!"
-        : "Email sent successfully!";
+        ? 'Failed to send email!'
+        : 'Email sent successfully!';
 
       toast(toastMessage);
     } catch (error) {
@@ -93,7 +93,7 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                           focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                           disabled:opacity-50"
                         placeholder="Your name"
-                        {...register("name")}
+                        {...register('name')}
                       />
                       {errors.name && (
                         <p className="text-red-500 text-xs">
@@ -114,7 +114,7 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                           focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                           disabled:opacity-50"
                         placeholder="Your email"
-                        {...register("email")}
+                        {...register('email')}
                       />
                       {errors.email && (
                         <p className="text-red-500 text-xs">
@@ -135,7 +135,7 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                         focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                         disabled:opacity-50"
                       placeholder="Subject"
-                      {...register("subject")}
+                      {...register('subject')}
                     />
                     {errors.subject && (
                       <p className="text-red-500 text-xs">
@@ -154,7 +154,7 @@ export const ContactMe = ({ social }: ContactMeProps) => {
                         focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
                         disabled:cursor-not-allowed disabled:opacity-50"
                       placeholder="Your message"
-                      {...register("message")}
+                      {...register('message')}
                     />
                     {errors.message && (
                       <p className="text-red-500 text-xs">

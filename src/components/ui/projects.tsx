@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 import {
   Card,
@@ -12,7 +12,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 
 interface ProjectsProps {
   projects: {

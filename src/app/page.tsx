@@ -1,12 +1,12 @@
-import { AboutMe } from "@/components/ui/aboutMe";
-import { ContactMe } from "@/components/ui/contactMe";
-import { Footer } from "@/components/ui/footer";
-import { HeroSection } from "@/components/ui/heroSection";
-import { Projects } from "@/components/ui/projects";
-import { Skills } from "@/components/ui/skills";
-import { Toaster } from "@/components/ui/sonner";
+import { AboutMe } from '@/components/ui/aboutMe';
+import { ContactMe } from '@/components/ui/contactMe';
+import { Footer } from '@/components/ui/footer';
+import { HeroSection } from '@/components/ui/heroSection';
+import { Projects } from '@/components/ui/projects';
+import { Skills } from '@/components/ui/skills';
+import { Toaster } from '@/components/ui/sonner';
 
-import { about, projects } from "../../portfolio";
+import { about, projects } from '../../portfolio';
 
 export default function Portfolio() {
   const { name, role, description, social } = about;

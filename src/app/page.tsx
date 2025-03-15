@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { motion } from 'framer-motion';
+import { ExternalLink, Github } from 'lucide-react';
 
-import { AboutMe } from "@/components/ui/aboutMe";
-import { Button } from "@/components/ui/button";
+import { AboutMe } from '@/components/ui/aboutMe';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -12,13 +12,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { ContactMe } from "@/components/ui/contactMe";
-import { Footer } from "@/components/ui/footer";
-import { HeroSection } from "@/components/ui/heroSection";
-import { Skills } from "@/components/ui/skills";
+} from '@/components/ui/card';
+import { ContactMe } from '@/components/ui/contactMe';
+import { Footer } from '@/components/ui/footer';
+import { HeroSection } from '@/components/ui/heroSection';
+import { Skills } from '@/components/ui/skills';
 
-import { about } from "../../portfolio";
+import { about } from '../../portfolio';
 
 export default function Portfolio() {
   const { name, role, description, social } = about;
@@ -52,25 +52,25 @@ export default function Portfolio() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "E-commerce Platform",
+                title: 'E-commerce Platform',
                 description:
-                  "A full-featured online store built with Next.js and Stripe integration.",
-                image: "/placeholder.svg?height=400&width=600",
-                tags: ["Next.js", "Stripe", "Tailwind CSS"],
+                  'A full-featured online store built with Next.js and Stripe integration.',
+                image: '/placeholder.svg?height=400&width=600',
+                tags: ['Next.js', 'Stripe', 'Tailwind CSS'],
               },
               {
-                title: "Task Management App",
+                title: 'Task Management App',
                 description:
-                  "A collaborative task manager with real-time updates using WebSockets.",
-                image: "/placeholder.svg?height=400&width=600",
-                tags: ["React", "Node.js", "Socket.io"],
+                  'A collaborative task manager with real-time updates using WebSockets.',
+                image: '/placeholder.svg?height=400&width=600',
+                tags: ['React', 'Node.js', 'Socket.io'],
               },
               {
-                title: "Portfolio Website",
+                title: 'Portfolio Website',
                 description:
-                  "A creative portfolio for a digital artist with advanced animations.",
-                image: "/placeholder.svg?height=400&width=600",
-                tags: ["Next.js", "Framer Motion", "Three.js"],
+                  'A creative portfolio for a digital artist with advanced animations.',
+                image: '/placeholder.svg?height=400&width=600',
+                tags: ['Next.js', 'Framer Motion', 'Three.js'],
               },
             ].map((project, index) => (
               <motion.div

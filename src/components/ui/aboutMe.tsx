@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { User } from "lucide-react";
-import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { User } from 'lucide-react';
+import React, { useRef } from 'react';
 
 interface AboutMeProps {
   about: string[];
@@ -13,10 +13,10 @@ export const AboutMe = ({ about }: AboutMeProps) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0]);
   return (
     <section ref={targetRef} className="relative py-24 justify-items-center">

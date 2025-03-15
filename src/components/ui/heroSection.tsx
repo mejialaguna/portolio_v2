@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { ArrowDown, Mail, Linkedin } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { motion } from 'framer-motion';
+import { ArrowDown, Mail, Linkedin } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 interface HeroSectionProps {
   name: string;
@@ -77,14 +77,14 @@ export const HeroSection = ({ name, role, social }: HeroSectionProps) => {
           <div className="p-4 text-sm text-slate-300">
             <pre className="font-mono">
               <code className="text-xs">
-                <span className="text-blue-400">const</span>{" "}
-                <span className="text-green-400">Portfolio</span> = () =&gt;{" "}
-                {"{"}
+                <span className="text-blue-400">const</span>{' '}
+                <span className="text-green-400">Portfolio</span> = () =&gt;{' '}
+                {'{'}
                 <br />
                 &nbsp;&nbsp;<span className="text-blue-400">return</span> (
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;
-                <span className="text-orange-400">div</span>{" "}
+                <span className="text-orange-400">div</span>{' '}
                 <span className="text-violet-400">className</span>=
                 <span className="text-green-300">&#34;container&#34;</span>
                 &gt;
@@ -102,7 +102,7 @@ export const HeroSection = ({ name, role, social }: HeroSectionProps) => {
                 <br />
                 &nbsp;&nbsp;);
                 <br />
-                {"}"};
+                {'}'};
               </code>
             </pre>
           </div>
@@ -110,13 +110,13 @@ export const HeroSection = ({ name, role, social }: HeroSectionProps) => {
       </motion.div>
 
       {/* Floating elements */}
-      {["React", "Next.js", "TypeScript", "Tailwind"].map((tech, i) => (
+      {['React', 'Next.js', 'TypeScript', 'Tailwind'].map((tech, i) => (
         <motion.div
           key={tech}
           className="absolute rounded-full bg-slate-800 px-3 py-1 text-sm font-medium text-white shadow-lg"
           style={{
             top: `${20 + i * 20}%`,
-            left: i % 2 === 0 ? "10%" : "80%",
+            left: i % 2 === 0 ? '10%' : '80%',
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

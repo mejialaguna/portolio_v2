@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
-import React from "react";
+import { motion } from 'framer-motion';
+import { Github, ExternalLink } from 'lucide-react';
+import React from 'react';
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 
 interface ContactMeProps {
   social: string;

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import { Code, Database, Monitor, Zap } from "lucide-react";
-import React from "react";
+import { motion } from 'framer-motion';
+import { Code, Database, Monitor, Zap } from 'lucide-react';
+import React from 'react';
 
 export const Skills = () => {
   return (
@@ -27,36 +27,36 @@ export const Skills = () => {
         <div className="grid gap-6 md:grid-cols-3">
           {[
             {
-              title: "Frontend",
+              title: 'Frontend',
               icon: <Monitor className="h-10 w-10 text-violet-400" />,
               skills: [
-                { name: "React", level: 90 },
-                { name: "Next.js", level: 85 },
-                { name: "TypeScript", level: 80 },
-                { name: "Tailwind CSS", level: 95 },
-                { name: "Design system", level: 95 },
+                { name: 'React', level: 90 },
+                { name: 'Next.js', level: 85 },
+                { name: 'TypeScript', level: 80 },
+                { name: 'Tailwind CSS', level: 95 },
+                { name: 'Design system', level: 95 },
               ],
             },
             {
-              title: "Backend",
+              title: 'Backend',
               icon: <Database className="h-10 w-10 text-violet-400" />,
               skills: [
-                { name: "Node.js", level: 85 },
-                { name: "Express", level: 80 },
-                { name: "PostgreSQL", level: 75 },
-                { name: "MongoDB", level: 70 },
-                { name: "Docker", level: 70 },
+                { name: 'Node.js', level: 85 },
+                { name: 'Express', level: 80 },
+                { name: 'PostgreSQL', level: 75 },
+                { name: 'MongoDB', level: 70 },
+                { name: 'Docker', level: 70 },
               ],
             },
             {
-              title: "Tools & Workflow",
+              title: 'Tools & Workflow',
               icon: <Zap className="h-10 w-10 text-violet-400" />,
               skills: [
-                { name: "Git", level: 90 },
-                { name: "AWS", level: 60 },
-                { name: "Figma", level: 75 },
-                { name: "Jira", level: 75 },
-                { name: "Postman", level: 75 },
+                { name: 'Git', level: 90 },
+                { name: 'AWS', level: 60 },
+                { name: 'Figma', level: 75 },
+                { name: 'Jira', level: 75 },
+                { name: 'Postman', level: 75 },
               ],
             },
           ].map((category, index) => (

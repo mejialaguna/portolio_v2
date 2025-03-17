@@ -9,7 +9,7 @@ export default function ContactFormBtn() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" className="w-full" disabled={pending}>
-      {pending ? 'Adding...' : 'Send Message'}
+      {pending ? 'Sending...' : 'Send Message'}
     </Button>
   );
 }

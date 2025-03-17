@@ -42,7 +42,6 @@ const projects = [
       'Zod',
       'React-hook-form',
       'Resend',
-      'Zod',
     ],
     DeploymentSite: 'Deployment site: Heroku',
     sourceCode: 'https://github.com/mejialaguna/portolio_v2',

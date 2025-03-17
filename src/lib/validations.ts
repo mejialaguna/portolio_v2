@@ -6,7 +6,7 @@ export const contactFormSchema = z.object({
   subject: z
     .string()
     .trim()
-    .min(10, { message: 'Subject is required or Subject is to small' })
+    .min(10, { message: 'Subject should be more than 10 character' })
     .max(100),
   message: z
     .union([z.literal(''), z.string().trim().max(1000)])

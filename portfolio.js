@@ -51,6 +51,35 @@ const projects = [
     shouldShow: true,
   },
   {
+    name: 'AI Content Generator',
+    description:
+      `I created AI Content Generator to help businesses, creators, students, and everyday users bring their ideas to life faster and easier. It generates blog posts, product descriptions, social media captions, and ad copy almost instantly, powered by GPT-3.5 Turbo and GPT-4. Users can choose different tones — professional, casual, fun, inspiring, persuasive, or informative — so the content always matches their voice. With real-time AI streaming, results start appearing as they’re being generated, making the experience feel fast and effortless.
+
+This project gave me the opportunity to focus on building something that's not just powerful, but also intuitive and flexible. I wanted the app to feel accessible for all kinds of users, whether they needed a quick caption or a full blog post. It’s a great example of my work in creating responsive, user-focused AI tools that prioritize both performance and a great user experience.`,
+    stack: [
+      'HTML',
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'React-dom',
+      'Next.js',
+      'Tailwind',
+      'Shadcn',
+      'Zod',
+      'React-hook-form',
+      'Postgres',
+      'prisma',
+      'vercel',
+      'husky',
+    ],
+    DeploymentSite: 'Deployment site: Vercel',
+    sourceCode: 'https://github.com/mejialaguna/portolio_v2',
+    livePreview: 'https://content-creator-green.vercel.app/',
+    image:
+      'https://res.cloudinary.com/jlml/image/upload/v1742056944/portfolio/r2twx2dzd67hcqauxfke.jpg',
+    shouldShow: true,
+  },
+  {
     name: 'Pet Shop Day Dare',
     description:
       'Looking for an easier way to care for your pets? Meet PetCare, the ultimate daycare app designed to help you effortlessly manage and track all your furry friends. Whether you’re a pet parent or a daycare provider, PetCare makes it simple to keep pets happy, healthy, and well-cared for—all in one place!',
